@@ -1,7 +1,7 @@
 :root {
     --laranja: #fca311;
     --cinza: #e5e5e5;
-    --azul: #14213d;
+    --azul: #4d0011;
     --branco: #ffffff;
   }
   
@@ -50,7 +50,7 @@
   
   #home {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     padding: 4em;
   
     display: flex;
@@ -65,7 +65,7 @@
   
   #home h1 {
     font-size: 3em;
-    color: var(--laranja);
+    color: #4d0011;
     font-style: oblique;
     font-display: inherit;
   }
@@ -84,8 +84,9 @@
   }
   
   #sobre img {
-    width: 30%;
+    width: 30% auto;
     border-radius: 15px;
+    display: flex;
     right: 0;
     box-shadow: 2px 2px 1em rgb(157, 156, 156);
   }
@@ -132,6 +133,7 @@
     width: 100%;
     height: 50vh;
     padding: 2em;
+
   }
   
   #formacoes ol {
@@ -146,6 +148,7 @@
     list-style: none;
     font-size: 1.1em;
     font-weight: 300;
+
   }
   
   .formacoes_titulo-lista {
@@ -172,6 +175,7 @@
   #experiencias li {
     margin-bottom: 15px;
   }
+
   
   .experiencias-conteudo {
     padding: 4em;
@@ -232,7 +236,7 @@
     color: var(--laranja);
     cursor: pointer;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 #myBtn:hover {
