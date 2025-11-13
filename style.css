@@ -1,0 +1,181 @@
+/* Estilos básicos para a página */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex; /* Adiciona flexbox */
+    justify-content: center; /* Centraliza os itens */
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Estilos para o conteúdo principal */
+.main-content {
+    padding: 20px;
+}
+
+/* Estilos para a seção Home */
+.home-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre a foto e o texto */
+    flex-wrap: wrap; /* Permite que o layout quebre em telas menores */
+    justify-content: center; /* Centraliza o conteúdo quando quebra */
+    padding-bottom: 20px; /* Espaçamento inferior */
+}
+
+.profile-pic-container {
+    order: 2; /* Define a ordem visual do item */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 40%; /* Deixa a imagem redonda */
+    border: 5px solid #4CAF50; /* Borda verde para combinar com o site */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+}
+
+.home-text {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    order: 1; /* Define a ordem visual do item */
+    min-width: 300px; /* Largura mínima para o texto antes de quebrar a linha */
+}
+
+.home-text h1 {
+    color: #4CAF50; /* Cor verde para o título principal */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para o texto */
+}
+
+.home-text a {
+    color: #4CAF50; /* Cor verde para os links de projetos */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+/* Ajuste para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .home-container {
+        text-align: center; /* Centraliza o texto quando a imagem está acima */
+    }
+}
+
+/* Estilos para a tabela de formação */
+.formacao-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove o espaçamento entre as bordas */
+    margin-top: 20px;
+}
+
+.formacao-table th, .formacao-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.formacao-table th {
+    background-color: #4CAF50; /* Um verde para o cabeçalho */
+    color: white;
+}
+
+/* Estilos para a seção de Habilidades */
+.skills-container {
+    display: flex;
+    justify-content: space-around; /* Distribui o espaço entre as colunas */
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+    gap: 20px; /* Espaçamento entre as colunas */
+    margin-top: 20px;
+}
+
+.skills-column {
+    flex: 1; /* Faz com que cada coluna ocupe um espaço igual */
+    min-width: 300px; /* Largura mínima antes de quebrar a linha */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para efeito de cartão */
+}
+
+.skills-column h3 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50; /* Linha com a cor do cabeçalho da tabela */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    background-color: #e7e7e7;
+    border-radius: 12px;
+    padding: 5px 15px;
+    margin: 5px;
+    display: inline-block; /* Faz os itens se comportarem como tags */
+    font-size: 14px;
+}
+
+/* Estilos para a seção de Contatos */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #555;
+}
+
+/* Estilos para o botão Voltar ao Topo */
+#backToTopBtn {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Posição fixa na tela */
+    bottom: 80px; /* 20px do fundo */
+    right: 30px; /* 30px da direita */
+    z-index: 99; /* Fica sobre os outros elementos */
+    border: none;
+    outline: none;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #4CAF50; /* Mesma cor verde do cabeçalho da tabela */
+}
