@@ -1,23 +1,34 @@
-// Pega o botão
-const backToTopButton = document.getElementById("backToTopBtn");
+const btnTopo = document.getElementById("btn-topo");
 
-// Quando o usuário rolar 20px para baixo a partir do topo do documento, mostre o botão
-window.onscroll = function() {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopButton.style.display = "block";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    btnTopo.classList.add("show");
   } else {
-    backToTopButton.style.display = "none";
+    btnTopo.classList.remove("show");
   }
-}
+});
 
-// Quando o usuário clicar no botão, role suavemente para o topo do documento
-backToTopButton.addEventListener("click", () => {
+btnTopo.addEventListener("click", (e) => {
+  e.preventDefault();
+
   window.scrollTo({
     top: 0,
-    behavior: 'smooth'
+    behavior: "smooth"
   });
 });
+
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
