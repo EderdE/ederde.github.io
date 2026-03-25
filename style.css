@@ -186,3 +186,24 @@ footer {
 .banner-card:hover {
   transform: scale(1.02);
 }
+
+/* Melhorias na seção de Case */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+  text-align: left;
+}
+
+.case-result {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-center {
+  text-align: center;
+}
