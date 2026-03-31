@@ -17,7 +17,8 @@ btnTopo.addEventListener("click", (e) => {
   });
 });
 
-const reveals = document.querySelectorAll('.reveal');
+// Seleciona todos os tipos de animação: padrão, esquerda e direita
+const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
@@ -32,3 +33,6 @@ function revealOnScroll() {
 }
 
 window.addEventListener('scroll', revealOnScroll);
+
+// Chama a função uma vez ao carregar para animar o que já está na tela (como o Hero)
+revealOnScroll();
